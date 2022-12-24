@@ -7,7 +7,7 @@ app.use(express.static("./public"));
 
 const server = http.createServer(app);
 const io = require("socket.io")(server, {
-  pingInterval: 1000 * 5 * 60,
+  pingInterval: 1000 * 5,
   pingTimeout: 30 * 60 * 1000 
 });
 
