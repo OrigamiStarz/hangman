@@ -1,0 +1,156 @@
+* {
+    font-family: Rajdhani;
+    --font-family: Rajdhani;
+    --font-color: #dedede;
+    --background: linear-gradient(143deg, rgba(2,0,36,1) 0%, rgba(103,9,121,1) 28%, rgba(8,28,133,1) 66%, rgba(0,212,255,1) 100%);
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */      
+  }
+   @media screen and (max-width: 1200px) {
+    pre {
+      max-height: 10vh;
+      overflow: scroll;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    pre {
+      height: 40vh;
+      white-space: pre-wrap;       /* Since CSS 2.1 */
+      white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+      white-space: -pre-wrap;      /* Opera 4-6 */
+      white-space: -o-pre-wrap;    /* Opera 7 */
+      word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    }
+  }
+  
+  body {
+    line-height: 1.5;
+    color: var(--font-color);
+    margin: 0;
+    overflow: hidden;   
+    width: 100vw;
+    height: 100vh;
+    background: var(--background);
+  }
+  /* headings */
+  h1 {
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 35px;
+    color: var(--font-color);
+    margin: 0;
+  }
+  #wordToGuess {
+    font-family: var(--font-family);
+    color: var(--font-color);
+    font-size: 40px;
+    letter-spacing: 10px;
+  }
+  #hehe {
+    background: linear-gradient(to left, white, #c7e3ff, #e0b5ff, #9400ff);
+    -webkit-background-clip: text;
+    transition: 0.5s ease-in-out;
+  }
+  #hehe:hover{
+    background: white;
+    transform: rotate(1turn) scale(2,2);
+    -webkit-background-clip: text;
+    transition: 0.5s ease-in-out;
+    font-weight: bold;
+  }
+  /* MODAL */
+  #modalTitle {
+    text-align: center;
+    font-size: 25px;
+    color: var(--font-color);
+    margin: 10px;
+  }
+  #modalContainer {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: block;
+    margin: 0;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+  }
+  #modalXBtn {
+    display: none;
+    top: 26vh;
+    right: 27vw;
+    position: absolute;
+    font-size: 1rem;
+  }
+  #modalXBtn:hover {
+    opacity: 0.7;
+    transition: 0.2s ease-in;
+  }
+  #modalContent {
+    width: 50vw;
+    max-height: 50vh;
+    margin: auto; /* to center it horizontally*/
+    margin-top: 25vh;
+    padding: 12vh 5vw;
+    background-color: #2e2e2e;
+    color: var(--font-color);
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+    overflow: scroll;
+  }
+  /* board */
+  #canvas {
+    margin: 2vh 2vw;
+    border: 1px solid #000000;
+    width: 50vw; 
+    height: 50vw;
+  }
+  /* container */
+  .container {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3)
+  }
+  /* letter container */
+  #letterContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .letterBtn {
+    border: 1px var(--font-color) solid;
+    border-radius: 5px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.1);
+    margin: 3px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    color: var(--font-color);
+    transition: 0.15s ease-out;
+  }
+  .letterBtn:hover {
+    opacity: 0.75;
+    transition: 0.2s ease-in;
+  }
+  /* scoreboard */
+  .playerDiv {
+    text-align: left;
+    margin: 2px;
+    padding: 5px;
+    margin-bottom: 0px;
+    left: 0px;
+  }
+  .playerDiv h1 {
+    margin: 10px;
+    font-size: 25px;
+  }

@@ -1,4 +1,11 @@
 {
+  "name": "hangman-project",
+  "version": "0.0.1",
+  "description": "A simple game of hangman, for 2 players.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "bootstrap": "^5.2.3",
     "express": "^4.18.2",
@@ -6,4 +13,10 @@
     "https": "^1.0.0",
     "socket.io": "^4.5.4"
   }
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "express",
+    "socket.io"
+  ]
 }
