@@ -186,7 +186,7 @@ socket.on("roundEnd", function(data) {
 // end game if someone disconnects, and disconnect this player
 socket.on("endGame", function(){
   socket.disconnect();
-  announce("Other player has left. Refresh to join a new game.")
+  announce("Other player has left. Refresh to join a new game.");
 });
 
 
