@@ -181,7 +181,7 @@ io.on("connection", function (socket) {
     }
   });
   socket.on("setWord", function(word) {
-    games[socket.id].setWord(word.substring(0,100).trim(),socket.id);
+    games[socket.id].setWord(word.substring(0,1000).trim(),socket.id);
     console.log(word);
   });
   socket.on("letterClicked", function(letter) {
